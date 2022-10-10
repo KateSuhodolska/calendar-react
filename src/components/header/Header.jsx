@@ -45,7 +45,7 @@ const Header = ({
   );
 };
 
-Header.PropTypes = {
+Header.propTypes = {
   handleTodayButton: PropTypes.func.isRequired,
   prevWeek: PropTypes.func.isRequired,
   nextWeek: PropTypes.func.isRequired,
