@@ -9,7 +9,6 @@ import {
   getDateTime,
 } from "../src/utils/dateUtils.js";
 import moment from "moment/moment.js";
-import PropTypes from "prop-types";
 import "./common.scss";
 
 const App = () => {
