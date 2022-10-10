@@ -1,5 +1,6 @@
 import React from "react";
 import { deleteEvent } from "../../gateway/events";
+import PropTypes from "prop-types";
 import "./popup.scss";
 
 const Popup = ({ fetchEvents, idToDelete }) => {
@@ -19,6 +20,11 @@ const Popup = ({ fetchEvents, idToDelete }) => {
       </div>
     </div>
   );
+};
+
+Popup.propTypes = {
+  fetchEvents: PropTypes.func.isRequired,
+  idToDelete: PropTypes.string.isRequired,
 };
 
 export default Popup;

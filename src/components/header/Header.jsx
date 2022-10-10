@@ -1,5 +1,6 @@
 import React from "react";
 import { getDisplayedMonth } from "../../utils/dateUtils";
+import PropTypes from "prop-types";
 import "./header.scss";
 
 const Header = ({
@@ -42,6 +43,14 @@ const Header = ({
       </header>
     </>
   );
+};
+
+Header.PropTypes = {
+  handleTodayButton: PropTypes.func.isRequired,
+  prevWeek: PropTypes.func.isRequired,
+  nextWeek: PropTypes.func.isRequired,
+  weekStartDate: PropTypes.object,
+  openModal: PropTypes.func.isRequired,
 };
 
 export default Header;

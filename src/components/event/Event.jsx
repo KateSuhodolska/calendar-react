@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Popup from "../popup/Popup";
+import PropTypes from "prop-types";
 import "./event.scss";
 
 const Event = ({ height, marginTop, title, time, id, fetchEvents }) => {
@@ -23,6 +24,15 @@ const Event = ({ height, marginTop, title, time, id, fetchEvents }) => {
       )}
     </div>
   );
+};
+
+Event.propTypes = {
+  height: PropTypes.number.isRequired,
+  marginTop: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  time: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  fetchEvents: PropTypes.func.isRequired,
 };
 
 export default Event;

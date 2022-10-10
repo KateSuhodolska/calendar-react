@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import "./modal.scss";
 
 class Modal extends Component {
@@ -76,5 +77,10 @@ class Modal extends Component {
     );
   }
 }
+
+Modal.propTypes = {
+  closeModal: PropTypes.func.isRequired,
+  createEvent: PropTypes.func.isRequired,
+};
 
 export default Modal;

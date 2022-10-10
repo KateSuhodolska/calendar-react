@@ -9,6 +9,7 @@ import {
   getDateTime,
 } from "../src/utils/dateUtils.js";
 import moment from "moment/moment.js";
+import PropTypes from "prop-types";
 import "./common.scss";
 
 const App = () => {
@@ -37,11 +38,9 @@ const App = () => {
   useEffect(() => {
     getEventsList();
   }, []);
-
   const getEventsList = () => {
     fetchEventsList().then((event) => createNewEvents(event));
   };
-
   const createEvent = (event, events) => {
     event.preventDefault();
     const { title, date, startTime, endTime, description } = events;

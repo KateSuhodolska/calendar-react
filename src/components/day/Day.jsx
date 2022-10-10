@@ -1,6 +1,6 @@
 import React from "react";
 import Hour from "../hour/Hour";
-
+import PropTypes from "prop-types";
 import "./day.scss";
 
 const Day = ({ dataDay, dayEvents, fetchEvents }) => {
@@ -10,7 +10,6 @@ const Day = ({ dataDay, dayEvents, fetchEvents }) => {
   return (
     <div className="calendar__day" data-day={dataDay}>
       {hours.map((hour) => {
-        //getting all events from the day we will render
         const hourEvents = dayEvents.filter(
           (event) => new Date(event.dateFrom).getHours() === hour
         );
@@ -27,6 +26,12 @@ const Day = ({ dataDay, dayEvents, fetchEvents }) => {
       })}
     </div>
   );
+};
+
+Day.propTypes = {
+  dataDay: PropTypes.number.isRequired,
+  dayEvents: PropTypes.array.isRequired,
+  fetchEvents: PropTypes.func,
 };
 
 export default Day;

@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment/moment.js";
 import { days } from "../../utils/dateUtils.js";
+import PropTypes from "prop-types";
 
 const Navigation = ({ weekDates }) => {
   return (
@@ -35,6 +36,10 @@ const Navigation = ({ weekDates }) => {
       })}
     </header>
   );
+};
+
+Navigation.propTypes = {
+  weekDates: PropTypes.array.isRequired,
 };
 
 export default Navigation;
